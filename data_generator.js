@@ -4,16 +4,17 @@
  */
 
 // set up data structures
-window.streams = {};
+window.streams = {}; //adding "streams" to the window object makes it a global variable
 streams.home = [];
 streams.users = {};
 streams.users.shawndrost = [];
 streams.users.sharksforcheap = [];
 streams.users.mracus = [];
 streams.users.douglascalhoun = [];
-window.users = Object.keys(streams.users);
+window.users = Object.keys(streams.users);//adding "users" to the window object makes it a global variable
 
 // utility function for adding tweets to our data structures
+// expects an object
 var addTweet = function(newTweet){
   var username = newTweet.user;
   streams.users[username].push(newTweet);
@@ -21,6 +22,7 @@ var addTweet = function(newTweet){
 };
 
 // utility function
+// could be used to randomly choose a tweet object from 'stream.users[user]' array
 var randomElement = function(array){
   var randomIndex = Math.floor(Math.random() * array.length);
   return array[randomIndex];
@@ -46,6 +48,7 @@ var generateRandomTweet = function(){
   addTweet(tweet);
 };
 
+//generates 10 tweets as soon as this file is ready
 for(var i = 0; i < 10; i++){
   generateRandomTweet();
 }
@@ -58,9 +61,11 @@ scheduleNextTweet();
 
 // utility function for letting students add "write a tweet" functionality
 // (note: not used by the rest of this file.)
+
+//the user name is collected via the prompt on load then the message is passed to this function through fom the value of the input box
 var writeTweet = function(message){
   if(!visitor){
-    throw new Error('set the global visitor property!');
+    throw new Error('set the global visitor property!');//implying that I should add window.visitor = input/prompt(What's your name?)
   }
   var tweet = {};
   tweet.user = visitor;
