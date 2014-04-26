@@ -2,10 +2,14 @@ body{
 	margin: 0px;
 	font-weight: 300;
 	font-family: 'Merriweather', Georgia, serif;
+	background-image: url('twittler_clouds.png');
+	background-color: #C0DEED;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
 }
-#content_wrapper{
+/*#content_wrapper{
 	width: 100%;
-}
+}*/
 #welcome_banner{
 	height: 80px;
 	width: 100%;
@@ -13,21 +17,41 @@ body{
 #logo{
 	float: left;
 	padding: 10px;
+	position: fixed;
 }
-#title_banner{
-	background-color: #324043;
-	width: 100%;
+#user_photo{
+	float: left;
+	padding: 4px;
+	border-radius: 10px;
+}
+#message_container{
+	position: relative;
+	top: 20px;
+	bottom: 200px;
+	margin-left: 30%;
+	margin-bottom: 20px;
+	height: 100%;
+	width: 500px;
+}
+.tweet_message{
 	height: 80px;
-	text-align: center;
+	text-align: left;
+	border-bottom: 1px solid #D3D3D3;
+	background-color: white;
 }
-#app_title{
-	color : white;
-	padding: 30px;
+#app_title h1{
+	float: left;
+	font-family: 'Schoolbell', arial, serif;
+	padding: 80px;
+	font-size: 60px;
+	position: fixed;
+	top: 0px;
+	right: 0px;
 }
 
 footer {
 	margin-top: 20px;
-	position: absolute;
+	position: fixed;
 	bottom: 0;
 	left: 0;
 	right: 0;

@@ -18,6 +18,7 @@ window.users = Object.keys(streams.users);//adding "users" to the window object 
 var addTweet = function(newTweet){
   var username = newTweet.user;
   streams.users[username].push(newTweet);
+  //the purpose of this home variable is to store the tweets in the order they were received
   streams.home.push(newTweet);
 };
 
