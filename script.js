@@ -1,10 +1,10 @@
 $(document).ready(function(){
-	function build(Username, Message, timeStamp){
+  function build(Username, Message, timeStamp){
     return '<a href=""><img id="user_photo" src="unknown-person-48px.jpg"><span id="user_id">@'+Username+'</span></a><span id="timeStamp">'+timeStamp+'</span></br><span>'+Message+'</span>';
   }
 
-	var lastestTweets;
-	var $messageWindow = $('.messages');
+  var lastestTweets;
+  var $messageWindow = $('.messages');
 
         $messageWindow.html('');
   function populateTimeline(){
@@ -19,9 +19,23 @@ $(document).ready(function(){
           $tweet.appendTo($messageWindow);
           index -= 1;
         }
-	}
+  }
+  window.username = prompt("What's your name?");
     populateTimeline();
     setInterval(populateTimeline, 5000);
-	
+
+  streams.users[username] = [];
+    function postMessage(){
+      var message = $('#field').val();
+      $('#field').val('');
+      var tweet = {};
+      tweet.user = window.username;
+      tweet.message = message;
+      tweet.created_at = new Date();
+      addTweet(tweet);
+    }
+    $('#send').on('click', postMessage);
+    
+  
 });
 

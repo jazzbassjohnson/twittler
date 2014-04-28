@@ -35,6 +35,30 @@ body{
 	font-size: 12px;
 	color: grey;
 }
+#user_input_window{
+	float: left;
+	margin-right: 40px;
+	position: fixed;
+	top: 100px;
+	right: 20px;
+	border: 1px solid black;
+	width: 275px;
+}
+#field{
+	width: 75%;
+	margin: 5px 0px 5px 5px;
+}
+#send{
+	margin-left: 10px;
+	float: r
+}
+#user_input_header{
+	height: 20px;
+	width: 100%;
+	background-color: black;
+	color: white;
+	text-align: center;
+}
 #message_container{
 	position: relative;
 	top: 20px;
@@ -45,15 +69,14 @@ body{
 	width: 500px;
 }
 .tweet_message{
-	height: 90px;
+	min-height: 90px;
 	text-align: left;
 	border-bottom: 1px solid #D3D3D3;
 	background-color: white;
 }
-#app_title h1{
-	float: left;
+#app_title{
 	font-family: 'Schoolbell', arial, serif;
-	padding: 80px;
+	padding-right: 80px;
 	font-size: 60px;
 	position: fixed;
 	top: 0px;

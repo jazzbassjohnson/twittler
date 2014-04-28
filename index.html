@@ -9,40 +9,21 @@
     <script type="text/javascript" src="script.js"></script>
   </head>
   <body>
-    <script>
-
-      // $(document).ready(function(){
-      //   var $messageWindow = $('.messages');
-      //   $messageWindow.html('');
-
-      //   var index = streams.home.length - 1;
-      //   //function
-
-      //   while(index >= 0){
-      //     var tweet = streams.home[index];
-      //     var $tweet = $('<div></div>');
-      //     $tweet.text('@' + tweet.user + ': ' + tweet.message);
-      //     $tweet.appendTo($messageWindow);
-      //     index -= 1;
-      //   }
-
-      // });
-    </script>
-
-
     <div id="content_wrapper">
 
       <div id="welcome_banner">
         <img id="logo" src="https://hrhq.squarespace.com/assets/images/logo@2x.png">
+        <div id="app_title">
+          <span>Twittler</span>
+        </div>
       </div>
-      <div id="app_title">
-        <h1>Twittler</h1>
-      </div>
-
-     
       <div id="message_container">
           <div id="message_header">Twittles</div>
           <div  class="messages" ></div >
+      </div>
+      <div id="user_input_window">
+        <div id="user_input_header">User Message</div>
+        <div id="user_input_field"><input id="field"><button id="send">Send</button></div>
       </div>
     </div>
     
