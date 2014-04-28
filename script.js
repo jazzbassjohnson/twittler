@@ -2,7 +2,7 @@ $(document).ready(function(){
   function build(Username, Message, timeStamp){
       $("span.timeago").timeago()
 
-    return '<a href=""><img id="user_photo" src="unknown-person-48px.jpg"><span id="user_id">@'+Username+'</span></a><span id="timeStamp" class="timeago">'+$.timeago(timeStamp)+'</span></br><span>'+Message+'</span>';
+    return '<a href=""><img id="user_photo" src="unknown-person-48px.jpg"><span id="user_id">@'+Username+'</span></a><span id="timeStamp" class="timeago" title="'+timeStamp.toISOString()+'" data-ts="'+ timeStamp.toISOString()+'">'+$.timeago(timeStamp)+'</span></br><span>'+Message+'</span>';
   }
   var lastestTweets;
   var $messageWindow = $('.messages');
@@ -37,7 +37,10 @@ $(document).ready(function(){
       addTweet(tweet);
     }
     $('#send').on('click', postMessage);
-    
+    $('.timeago').each(function() {
+        var $this = $(this);
+        $this.attr('title', $this.data('ts'));
+    }).timeago();
   
 });
 
