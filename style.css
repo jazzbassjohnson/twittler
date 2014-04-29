@@ -8,13 +8,14 @@ body{
 	background-attachment: fixed;
 }
 #message_header{
+	position: relative;
 	background-color: grey;
-	border-radius: 10px 10px 00px 0px;
 	text-align: center;
 	color: white;
 	height: 40px;
 	padding: 20px;
 	font-size: 40px;
+	margin-top: 0px;
 }
 #welcome_banner{
 	height: 80px;
@@ -41,8 +42,10 @@ body{
 	position: fixed;
 	top: 100px;
 	right: 20px;
-	border: 1px solid black;
+	border-radius: 5px;
+	border: 1px solid grey;
 	width: 275px;
+	background-color: grey;
 }
 #field{
 	width: 75%;
@@ -55,7 +58,7 @@ body{
 #user_input_header{
 	height: 20px;
 	width: 100%;
-	background-color: black;
+	background-color: #FC7800;
 	color: white;
 	text-align: center;
 }
