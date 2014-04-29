@@ -10,12 +10,12 @@
     <script type="text/javascript" src="jquery.timeago.js"></script>
   </head>
   <body>
-    <script type="text/javascript">window.visitor = prompt("Welcome to Twittler. What's your name?").toLowerCase();</script>
+    <script type="text/javascript">window.visitor = prompt("Welcome to Twittler. What's your name?").toLowerCase(); streams.users[window.visitor] = [];</script>
     <div id="content_wrapper">
       <div id="welcome_banner">
         <img id="logo" src="https://hrhq.squarespace.com/assets/images/logo@2x.png">
         <div id="app_title">
-          <span>Twittler</span>
+          <span id="twittler">Twittler</span>
         </div>
       </div>
 

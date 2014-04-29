@@ -68,14 +68,13 @@ var writeTweet = function(message){
   if(!visitor){
     // throw new Error('set the global visitor property!');//implying that I should add window.visitor = input/prompt(What's your name?)
     window.visitor = prompt("Welcome to Twittler. What's your name?").toLowerCase();
+    streams.users[window.visitor] = [];
     writeTweet(message);
   }else{
-    streams.users[window.visitor] = [];
     var tweet = {};
     tweet.user = visitor;
     tweet.message = message;
     tweet.created_at = new Date();
     addTweet(tweet);
-    
   }
 };
