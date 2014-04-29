@@ -7,7 +7,7 @@ $(document).ready(function(){
   //Utility Functions
   function build(Username, Message, timeStamp){
       var div = '<a href=""><img id="user_photo" src="unknown-person-48px.jpg"><span id="user_id">@'+Username+'</span></a><span id="timeStamp" class="timeago" title="'+timeStamp.toISOString()+'" data-ts="'+ timeStamp.toISOString()+'">'+$.timeago(timeStamp)+'</span></br><span>'+Message+'</span>';
-          $("span.timeago").timeago()
+          // $("span.timeago").timeago()
     return div;
   }
 
